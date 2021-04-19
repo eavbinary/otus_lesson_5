@@ -117,7 +117,7 @@ class Game:
 
         for index, keg in enumerate(self.__kegs):
             print('\n\n')
-            if self.__play_round(keg, self.__count_kegs - index):
+            if self.__play_round(keg, self.__count_kegs - index - 1):
                 return
 
     def add_player(self, type_payer, name):
@@ -127,7 +127,7 @@ class Game:
         self.__players.clear()
 
     def __play_round(self, keg, keg_left):
-        print(f'Выпал боченок: {keg} (осталось {keg_left})')
+        print(f'Выпал бочонок: {keg} (осталось {keg_left})')
         for item in self.__players:
             if not item.status == 'lost':
                 item.show_card()
