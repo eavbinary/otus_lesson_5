@@ -32,6 +32,10 @@ class Game:
     def clear_players(self):
         self.__players.clear()
 
+    @property
+    def count_players(self):
+        return len(self.__players)
+
     def __play_round(self, keg, keg_left):
         print(f'Выпал бочонок: {keg} (осталось {keg_left})')
         for item in self.__players:
